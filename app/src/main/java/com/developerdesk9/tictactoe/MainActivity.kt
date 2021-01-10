@@ -1,18 +1,13 @@
 package com.developerdesk9.tictactoe
 
-import android.graphics.Color
-import android.media.Image
-import android.media.MediaPlayer
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -51,12 +46,12 @@ class MainActivity : AppCompatActivity() {
             R.id.button9 -> 9
             else -> -1
         }
-        positionUpdate(curBtnId,view)
+        positionUpdate(curBtnId, view)
     }
 
 
 
-    fun positionUpdate(curBtnId:Int,view: View){
+    fun positionUpdate(curBtnId: Int, view: View){
         var BTN = view as Button
 
         var chance = findViewById<TextView>(R.id.tv_chance)
@@ -165,7 +160,7 @@ class MainActivity : AppCompatActivity() {
 
     fun noOnewon(){
 
-        var mDialogView = LayoutInflater.from(this).inflate(R.layout.custom_alert_layout,null)
+        var mDialogView = LayoutInflater.from(this).inflate(R.layout.custom_alert_layout, null)
 
 
         var won_txt = mDialogView.findViewById<TextView>(R.id.tv_alert_dialog_won_show)
@@ -209,11 +204,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun alertDialog(wonPlayer:Int){
+    fun alertDialog(wonPlayer: Int){
 
         if (wonPlayer==1) player1Score+=1 else player2Score+=1
 
-        var mDialogView = LayoutInflater.from(this).inflate(R.layout.custom_alert_layout,null)
+        var mDialogView = LayoutInflater.from(this).inflate(R.layout.custom_alert_layout, null)
 
 
         var won_txt = mDialogView.findViewById<TextView>(R.id.tv_alert_dialog_won_show)
@@ -290,7 +285,7 @@ class MainActivity : AppCompatActivity() {
 
 
     override fun onBackPressed() {
-        var mDialogView = LayoutInflater.from(this).inflate(R.layout.custom_alert_layout,null)
+        var mDialogView = LayoutInflater.from(this).inflate(R.layout.custom_alert_layout, null)
 
 
         var won_txt = mDialogView.findViewById<TextView>(R.id.tv_alert_dialog_won_show)
