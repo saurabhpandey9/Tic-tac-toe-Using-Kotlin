@@ -4,48 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3CFCF"
+    android:background="@color/bg_color"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tv_score"
-        android:gravity="center"
-        android:text="Scores"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
 
-    <LinearLayout
-        android:layout_marginBottom="10dp"
-        android:gravity="center"
-        android:orientation="horizontal"
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="@dimen/btn_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tv_score_player1"
+        <LinearLayout
             android:gravity="center"
-            android:layout_weight="1"
-            android:text="Player 1:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-        <TextView
-            android:id="@+id/tv_score_player2"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:text="Player 2:"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_score"
+                android:gravity="center"
+                android:text="Scores"
+                android:textSize="@dimen/btn_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textStyle="italic"
+                    android:textSize="@dimen/btn_text_size"
+                    android:id="@+id/tv_score_player1"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Player 1: 0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:textStyle="italic"
+                    android:textSize="@dimen/btn_text_size"
+                    android:id="@+id/tv_score_player2"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:text="Player 2: 0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </LinearLayout>
 
 
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:padding="10dp"
+        android:background="@android:color/white"
+        android:id="@+id/tv_chance"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textColor="@color/player1_color"
+        android:text="Chance of Player: 1"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
 
 
     <TableLayout
+        android:layout_marginTop="@dimen/btn_margin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
@@ -55,28 +94,31 @@
             android:layout_height="wrap_content" >
 
             <Button
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
                 android:onClick="onBtnClick"
-                android:layout_margin="@dimen/btn_margin"
-                android:height="@dimen/btn_size"
-                android:width="@dimen/btn_size"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
                 android:backgroundTint="@color/btn_default_color"
                 android:id="@+id/button1"
                 android:layout_width="@dimen/btn_size"
                 android:layout_height="@dimen/btn_size"/>
             <Button
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
                 android:onClick="onBtnClick"
-                android:layout_margin="@dimen/btn_margin"
-                android:height="@dimen/btn_size"
-                android:width="@dimen/btn_size"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
                 android:backgroundTint="@color/btn_default_color"
                 android:id="@+id/button2"
                 android:layout_width="@dimen/btn_size"
                 android:layout_height="@dimen/btn_size"/>
             <Button
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
                 android:onClick="onBtnClick"
-                android:layout_margin="@dimen/btn_margin"
-                android:height="@dimen/btn_size"
-                android:width="@dimen/btn_size"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
                 android:backgroundTint="@color/btn_default_color"
                 android:id="@+id/button3"
                 android:layout_width="@dimen/btn_size"
@@ -88,28 +130,31 @@
             android:layout_height="wrap_content" >
 
             <Button
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
                 android:onClick="onBtnClick"
-                android:layout_margin="@dimen/btn_margin"
-                android:height="@dimen/btn_size"
-                android:width="@dimen/btn_size"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
                 android:backgroundTint="@color/btn_default_color"
                 android:id="@+id/button4"
                 android:layout_width="@dimen/btn_size"
                 android:layout_height="@dimen/btn_size"/>
             <Button
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
                 android:onClick="onBtnClick"
-                android:layout_margin="@dimen/btn_margin"
-                android:height="@dimen/btn_size"
-                android:width="@dimen/btn_size"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
                 android:backgroundTint="@color/btn_default_color"
                 android:id="@+id/button5"
                 android:layout_width="@dimen/btn_size"
                 android:layout_height="@dimen/btn_size"/>
             <Button
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
                 android:onClick="onBtnClick"
-                android:layout_margin="@dimen/btn_margin"
-                android:height="@dimen/btn_size"
-                android:width="@dimen/btn_size"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
                 android:backgroundTint="@color/btn_default_color"
                 android:id="@+id/button6"
                 android:layout_width="@dimen/btn_size"
@@ -121,28 +166,31 @@
             android:layout_height="wrap_content" >
 
             <Button
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
                 android:onClick="onBtnClick"
-                android:layout_margin="@dimen/btn_margin"
-                android:height="@dimen/btn_size"
-                android:width="@dimen/btn_size"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
                 android:backgroundTint="@color/btn_default_color"
                 android:id="@+id/button7"
                 android:layout_width="@dimen/btn_size"
                 android:layout_height="@dimen/btn_size"/>
             <Button
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
                 android:onClick="onBtnClick"
-                android:layout_margin="@dimen/btn_margin"
-                android:height="@dimen/btn_size"
-                android:width="@dimen/btn_size"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
                 android:backgroundTint="@color/btn_default_color"
                 android:id="@+id/button8"
                 android:layout_width="@dimen/btn_size"
                 android:layout_height="@dimen/btn_size"/>
             <Button
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_text_size"
                 android:onClick="onBtnClick"
-                android:layout_margin="@dimen/btn_margin"
-                android:height="@dimen/btn_size"
-                android:width="@dimen/btn_size"
+                android:layout_marginLeft="@dimen/btn_margin"
+                android:layout_marginRight="@dimen/btn_margin"
                 android:backgroundTint="@color/btn_default_color"
                 android:id="@+id/button9"
                 android:layout_width="@dimen/btn_size"
@@ -152,15 +200,7 @@
     </TableLayout>
 
 
-    <TextView
-        android:id="@+id/tv_chance"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="Chance of Player: 1"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+
 
 
 
