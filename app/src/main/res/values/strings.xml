@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tic Tac Toe</string>
+
+
+    <dimen name="btn_size">50pt</dimen>
+    <dimen name="btn_margin">3pt</dimen>
+
+
+</resources>
